@@ -1,0 +1,6 @@
+5
+Vasya Petrov 5 5 5
+Angelina Andreeva 3 3 3
+Andrey Ivanov 2 2 2
+Sasha Sidorova 5 5 5
+Aleksey Rublev 4 4 4
