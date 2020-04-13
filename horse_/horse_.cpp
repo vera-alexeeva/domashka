@@ -37,8 +37,8 @@ int main () {
 
 	//прямой пересчёт
 
-	for (int i=2; i<31; i++){
-		for (int j=2; j<34; j++){
+	for (int i=2; i<n; i++){
+		for (int j=2; j<m; j++){
 			pole[i][j] = pole[i-1][j-2] + pole[i-2][j-1];
 		}
 	}
