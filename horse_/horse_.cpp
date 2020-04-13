@@ -19,13 +19,11 @@ int main () {
 
 	//создание поля n x m; n - кол-во строк, m - кол-во столбцов
 
-	vector<vector<int> > pole (n, vector<int>(m));
+	//vector<vector<int> > pole (n, vector<int>(m));
 
-	/*
 	int **pole = new int * [n];
 	for (int i = 0; i<n; i++)
 		pole[i] = new int [m];
-	*/
 
 	for (int i=0; i<n; i++)
 			for (int j=0; j<m; j++)
@@ -45,7 +43,7 @@ int main () {
 		}
 	}
 
-	//вывод ответа: ответ находится в ячейке pole[n][m]
+	//вывод ответа: ответ находится в ячейке pole[n-1][m-1]
 
 	cout << pole[n-1][m-1];
 
