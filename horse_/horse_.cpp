@@ -32,6 +32,10 @@ int main () {
 	//начальное состояние
 
 	pole[0][0] = 1;
+	
+	if (n<=2 && m<=2) cout << pole[n-1][m-1];
+
+	else {
 	pole[1][2] = 1;
 	pole[2][1] = 1;
 
@@ -47,6 +51,8 @@ int main () {
 
 	cout << pole[n-1][m-1];
 
+	}
+	
 	return 0;
 }
 
