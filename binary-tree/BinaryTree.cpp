@@ -80,6 +80,20 @@ struct tree {
 
 	}
 
+	//метод подсчёта листьев в поддереве
+
+	void count_leaves(Node* root, int *counter) {
+		if (!root) {
+			return;
+		}
+		if(!root->left && !root->right) {
+			++(*counter);
+			return;
+		}
+		count_leaves(root->left, counter);
+		count_leaves(root->right, counter);
+	}
+
 	//метод удаления элемента из дерева
 
 	void DeleteNode(int x){
@@ -200,8 +214,16 @@ int main() {
 	int x;
 
 	Node *t;
+	Node *root;
 
-	for (int i=0; i<n; i++){
+	//root - указатель на корень дерева oak
+
+	fin >> x;
+	root = oak.add(x);
+
+	//ввод дерева из файла
+
+	for (int i=1; i<n; i++){
 		fin >> x;
 		t = oak.add(x);
 		x = 0;
@@ -211,7 +233,14 @@ int main() {
 
 	oak.visit();
 
-	cout << endl;
+	//подсчёт листьев
+
+	int C = 0;
+	oak.count_leaves(root, &C);
+
+	cout << endl << C << endl;
+
+	//добавление ноды со значением 5 в дерево oak
 
 	t = oak.add(5);
 
@@ -221,7 +250,7 @@ int main() {
 
 	//oak.DeleteNode(5);
 
-	oak.visit();
+	//oak.visit();
 
 	return 0;
 }
