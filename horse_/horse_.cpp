@@ -8,14 +8,21 @@
 
 #include <iostream>
 #include <vector>
+#include <fstream>
 
 using namespace std;
 
 int main () {
 
+	//ввод данных ведётся из файла
+
+	ifstream fin("input.txt");
+
 	int n;
 	int m;
-	cin >> n >> m;
+	fin >> n >> m;
+
+	fin.close();
 
 	//создание поля n x m; n - кол-во строк, m - кол-во столбцов
 
@@ -34,7 +41,6 @@ int main () {
 	pole[0][0] = 1;
 	
 	if (n<=2 && m<=2) cout << pole[n-1][m-1];
-
 	else {
 	pole[1][2] = 1;
 	pole[2][1] = 1;
@@ -52,7 +58,6 @@ int main () {
 	cout << pole[n-1][m-1];
 
 	}
-	
 	return 0;
 }
 
