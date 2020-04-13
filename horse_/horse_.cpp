@@ -47,7 +47,7 @@ int main () {
 
 	//вывод ответа: ответ находится в ячейке pole[n][m]
 
-	cout << pole[n][m];
+	cout << pole[n-1][m-1];
 
 	return 0;
 }
