@@ -1,5 +1,7 @@
 /.metadata/
 a.out
-.cproject/
-.project/
-.settings/
+.cproject
+.project
+.settings
+Debug
+*.o
